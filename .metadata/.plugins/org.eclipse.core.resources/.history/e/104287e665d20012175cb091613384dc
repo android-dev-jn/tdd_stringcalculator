@@ -7,13 +7,8 @@ public class Calculator {
 	}
 
 	public static int add(String string) {
-		int result = 0;
-		if (string.equals("")) {
-			// do nothing
-		} else {
-			result = Integer.parseInt(string);
-		}		
-		return result;
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

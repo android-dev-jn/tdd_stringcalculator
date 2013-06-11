@@ -11,7 +11,7 @@ public class Calculator {
 		if (string.equals("")) {
 			// do nothing
 		} else {
-			result = Integer.parseInt(string);
+			
 		}		
 		return result;
 	}
