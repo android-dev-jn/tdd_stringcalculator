@@ -2,7 +2,7 @@ package Calculator;
 
 public class Calculator {
 	
-	static int[] numbers = new int[1000];
+	int[] numbers = new int[1000];
 
 	public static int add() {
 		return 0;
@@ -13,12 +13,7 @@ public class Calculator {
 		if (string.equals("")) {
 			// do nothing
 		} else {
-			String[] tokens = string.split(",");
-			for (int i = 0 ; i <tokens.length; i ++) {
-				numbers[i] = Integer.parseInt(tokens[i]);
-				result += numbers[i];
-			}	
-			
+			result = Integer.parseInt(string);
 		}
 		return result;
 	}
