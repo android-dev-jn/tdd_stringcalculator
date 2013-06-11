@@ -12,7 +12,7 @@ public class Calculator {
 			// do nothing
 		} else {
 			result = Integer.parseInt(string);
-		}
+		}		
 		return result;
 	}
 
