@@ -1,7 +1,6 @@
 package Calculator;
 
 import java.util.ArrayList;
-import java.util.regex.Pattern;
 
 public class Calculator {
 
@@ -24,7 +23,7 @@ public class Calculator {
 			if (string.contains("//") && string.contains("\n")) {
 				input = string.substring(string.indexOf("\n") + 1);
 			}
-			if (string.contains("//[") && string.contains("]\n")) {
+			if (string.contains("//[") && string.contains("\n")) {
 				
 				delimiter = string.substring(3, string.indexOf("]\n"));
 				System.out.println("delimiter: " + delimiter);
@@ -42,7 +41,7 @@ public class Calculator {
 			for (int i = 1; i < delimiters.size(); i++) {
 				tokensB = new ArrayList<String>();
 				for (int j = 0; j < tokensA.size(); j++) {
-					tokens = tokensA.get(j).split(Pattern.quote(delimiters.get(i)));
+					tokens = tokensA.get(j).split(delimiters.get(i));
 					for (int x = 0; x < tokens.length; x++) {
 						tokensB.add(tokens[x]);
 					}

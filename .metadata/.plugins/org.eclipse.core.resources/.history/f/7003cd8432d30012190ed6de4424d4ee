@@ -1,7 +1,6 @@
 package Calculator;
 
 import java.util.ArrayList;
-import java.util.regex.Pattern;
 
 public class Calculator {
 
@@ -14,7 +13,7 @@ public class Calculator {
 
 	public static int add(String string) {
 		int result = 0, numberOfNegative = 0;
-		String msg = "negatives not allowed: ", delimiter = "";;
+		String msg = "negatives not allowed: ";
 		ArrayList<String> tokensA = new ArrayList<String>();
 		ArrayList<String> tokensB = new ArrayList<String>();
 		if (string.equals("")) {
@@ -23,12 +22,6 @@ public class Calculator {
 			String input = string;
 			if (string.contains("//") && string.contains("\n")) {
 				input = string.substring(string.indexOf("\n") + 1);
-			}
-			if (string.contains("//[") && string.contains("]\n")) {
-				
-				delimiter = string.substring(3, string.indexOf("]\n"));
-				System.out.println("delimiter: " + delimiter);
-				delimiters.add(delimiter);				
 			}
 			System.out.println("input: " + input);
 			delimiters.add(new String(","));
@@ -42,7 +35,7 @@ public class Calculator {
 			for (int i = 1; i < delimiters.size(); i++) {
 				tokensB = new ArrayList<String>();
 				for (int j = 0; j < tokensA.size(); j++) {
-					tokens = tokensA.get(j).split(Pattern.quote(delimiters.get(i)));
+					tokens = tokensA.get(j).split(delimiters.get(i));
 					for (int x = 0; x < tokens.length; x++) {
 						tokensB.add(tokens[x]);
 					}
