@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="StringCalculator08" project="StringCalculator08" tests="8" started="8" failures="0" errors="0" ignored="0">
+  <testsuite name="Calculator.CalculatorTest" time="0.0">
+    <testcase name="handleEmptyString" classname="Calculator.CalculatorTest" time="0.0"/>
+    <testcase name="handleNonInput" classname="Calculator.CalculatorTest" time="0.0"/>
+    <testcase name="handleSingleNumber" classname="Calculator.CalculatorTest" time="0.0"/>
+    <testcase name="handleDelimiter" classname="Calculator.CalculatorTest" time="0.0"/>
+    <testcase name="handleNewLine" classname="Calculator.CalculatorTest" time="0.0"/>
+    <testcase name="handleNewDelimiter" classname="Calculator.CalculatorTest" time="0.0"/>
+    <testcase name="handleNegativeNumber" classname="Calculator.CalculatorTest" time="0.0"/>
+    <testcase name="handleLargerThanThousand" classname="Calculator.CalculatorTest" time="0.0"/>
+  </testsuite>
+</testrun>
