@@ -47,7 +47,7 @@ public class Calculator {
 			}
 			for (int i = 0; i < tokensA.size(); i ++) {
 				numbers[i] = Integer.parseInt(tokensA.get(i));
-				result += numbers[i];
+				result += nubmer[i];
 			}
 		}
 		return result;
