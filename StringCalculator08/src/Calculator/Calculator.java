@@ -1,8 +1,11 @@
 package Calculator;
 
+import java.util.ArrayList;
+
 public class Calculator {
 	
 	static int[] numbers = new int[1000];
+	static String[] delimiters;
 
 	public static int add() {
 		return 0;
@@ -10,15 +13,36 @@ public class Calculator {
 
 	public static int add(String string) {
 		int result = 0;
+		ArrayList<String> tokensA = new ArrayList<String>();
+		ArrayList<String> tokensB = new ArrayList<String>();
 		if (string.equals("")) {
 			// do nothing
-		} else {
-			String[] tokens = string.split(",");
-			for (int i = 0 ; i <tokens.length; i ++) {
-				numbers[i] = Integer.parseInt(tokens[i]);
-				result += numbers[i];
-			}	
+		} else {		
+			delimiters = new String[2];
+			delimiters[0] = new String(",");
+			delimiters[1] = new String("\n");
+			String[] firstToken = string.split(delimiters[0]), tokens;
+			for (int i = 0; i < firstToken.length; i ++) {
+				tokensA.add(firstToken[i]);
+			}
 			
+			
+			for (int i = 0 ; i < delimiters.length; i ++) {
+				tokensB = new ArrayList<String>();
+				for (int j = 0; j < tokensA.size(); j ++) {
+					tokens = tokensA.get(j).split(delimiters[i]);
+					for (int x = 0; x < tokens.length; x ++) {
+						tokensB.add(tokens[x]);
+					}
+				}
+				tokensA = new ArrayList<String>();
+				for (int j = 0; j < tokensB.size(); j ++) {
+					tokensA.add(new String(tokensB.get(j)));
+				}
+			}
+			for (int i = 0; i < tokensA.size(); i ++) {
+				result += Integer.parseInt(tokensA.get(i));
+			}
 		}
 		return result;
 	}
