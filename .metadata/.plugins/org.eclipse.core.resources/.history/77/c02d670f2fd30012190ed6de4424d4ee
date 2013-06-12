@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Calculator {
 	
 	static int[] numbers = new int[1000];
-	static ArrayList<String> delimiters = new ArrayList<String>();
+	static String[] delimiters;
 
 	public static int add() {
 		return 0;
@@ -18,24 +18,23 @@ public class Calculator {
 		if (string.equals("")) {
 			// do nothing
 		} else {
-			String input = string;
-			if (string.contains("//") && string.contains("\n")) {
-				input = string.substring(string.indexOf("\n") + 1);
+			if (string.contains("\n")) {
+				string.replace("\n", ",");
 			}
-			System.out.println("input: "  + input);
-			delimiters.add(new String(","));
-			delimiters.add(new String("\n"));
-			delimiters.add(new String(";"));
-			String[] firstToken = input.split(delimiters.get(0)), tokens;
+			System.out.println(string);
+			delimiters = new String[2];
+			delimiters[0] = new String(",");
+			delimiters[1] = new String(";");
+			String[] firstToken = string.split(delimiters[0]), tokens;
 			for (int i = 0; i < firstToken.length; i ++) {
 				tokensA.add(firstToken[i]);
 			}
 			
 			
-			for (int i = 1 ; i < delimiters.size(); i ++) {
+			for (int i = 0 ; i < delimiters.length; i ++) {
 				tokensB = new ArrayList<String>();
 				for (int j = 0; j < tokensA.size(); j ++) {
-					tokens = tokensA.get(j).split(delimiters.get(i));
+					tokens = tokensA.get(j).split(delimiters[i]);
 					for (int x = 0; x < tokens.length; x ++) {
 						tokensB.add(tokens[x]);
 					}

@@ -18,15 +18,11 @@ public class Calculator {
 		if (string.equals("")) {
 			// do nothing
 		} else {
-			String input = string;
-			if (string.contains("//") && string.contains("\n")) {
-				input = string.substring(string.indexOf("\n") + 1);
-			}
-			System.out.println("input: "  + input);
+			
 			delimiters.add(new String(","));
 			delimiters.add(new String("\n"));
 			delimiters.add(new String(";"));
-			String[] firstToken = input.split(delimiters.get(0)), tokens;
+			String[] firstToken = string.split(delimiters.get(0)), tokens;
 			for (int i = 0; i < firstToken.length; i ++) {
 				tokensA.add(firstToken[i]);
 			}

@@ -20,7 +20,7 @@ public class Calculator {
 		} else {
 			String input = string;
 			if (string.contains("//") && string.contains("\n")) {
-				input = string.substring(string.indexOf("\n") + 1);
+				input = string.substring(string.indexOf("\n"));
 			}
 			System.out.println("input: "  + input);
 			delimiters.add(new String(","));
