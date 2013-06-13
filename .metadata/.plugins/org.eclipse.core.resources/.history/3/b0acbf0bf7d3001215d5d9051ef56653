@@ -29,11 +29,10 @@ public class Calculator {
 				result += numbers[i];
 				if (numbers[i] < 0) {
 					numberOfNegative ++;
-					msg += String.valueOf(numbers[i]);
 				}
 			}
 			if (numberOfNegative != 0) {
-				throw new NumberFormatException(msg);
+				throw
 			}
 			return result;
 		}
