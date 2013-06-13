@@ -18,13 +18,14 @@ public class Calculator {
 			String delimiter = ",", input = string, msg = "negatives not allowed: ";
 			if (string.contains("//") && string.contains("\n")) {
 				delimiter = string.substring(2,3);
-				input = string.substring(string.indexOf("\n") + 1);
+				input = string.substring(4);
 			}
 			if (string.contains("//[") && string.contains("]\n")) {
-				delimiter = string.substring(3, string.indexOf("]\n"));				
+				delimiter = string.substring(3, string.indexOf("]\n"));
+				input = string.substring(string.indexOf("]\n") + 2);
 			}
 			if (input.contains("\n")) {
-				input = input.replace("\n", delimiter);
+				input = input.replace("\n", ",");
 			}
 			
 			String[] tokens = input.split(Pattern.quote(delimiter));

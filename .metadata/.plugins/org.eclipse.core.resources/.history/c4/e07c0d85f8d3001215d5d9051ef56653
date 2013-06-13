@@ -18,7 +18,7 @@ public class Calculator {
 			String delimiter = ",", input = string, msg = "negatives not allowed: ";
 			if (string.contains("//") && string.contains("\n")) {
 				delimiter = string.substring(2,3);
-				input = string.substring(string.indexOf("\n") + 1);
+				input = string.substring(string.indexOf("]\n") + 2);
 			}
 			if (string.contains("//[") && string.contains("]\n")) {
 				delimiter = string.substring(3, string.indexOf("]\n"));				
