@@ -2,6 +2,8 @@ package Calculator;
 
 public class Calculator {
 	
+	private static int[] numbers = new int[1000];
+
 	public static int add() {
 		// TODO Auto-generated method stub
 		return 0;
