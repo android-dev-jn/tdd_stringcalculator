@@ -1,9 +1,5 @@
 package Calculator;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Test;
-
 public class Calculator {
 
 	public static int add() {
@@ -14,10 +10,6 @@ public class Calculator {
 	public static int add(String string) {
 		// TODO Auto-generated method stub
 		return 0;
-	}
-	@Test
-	public void handleSingleNumber(){
-		assertEquals(1, Calculator.add("1"));
 	}
 
 }
