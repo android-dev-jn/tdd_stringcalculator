@@ -13,5 +13,8 @@ public class Calculator {
 		} else {
 			return Integer.parseInt(string);
 		}
+		return 0;
 	}
+	
+
 }
