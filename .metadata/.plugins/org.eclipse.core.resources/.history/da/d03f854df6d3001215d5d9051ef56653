@@ -12,17 +12,16 @@ public class Calculator {
 			return 0;
 		} else {
 			int result = 0;
-			String delimiter = ",", input = string;
+			String delimiter = ",", input = "";
 			if (string. contains("//") && string.contains("\n")) {
-				delimiter = string.substring(2,3);
+				delimiter = string.substring(1,2);
 				input = string.substring(4);
 			}
 			if (input.contains("\n")) {
 				input = input.replace("\n", ",");
 			}
-			System.out.println(delimiter);
 			
-			String[] tokens = input.split(delimiter);
+			String[] tokens = input.split(",");
 			for (int i = 0; i < tokens.length; i ++) {
 				result += Integer.parseInt(tokens[i]);
 			}

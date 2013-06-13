@@ -14,7 +14,7 @@ public class Calculator {
 			int result = 0;
 			String delimiter = ",", input = string;
 			if (string. contains("//") && string.contains("\n")) {
-				delimiter = string.substring(2,3);
+				delimiter = string.substring(1,2);
 				input = string.substring(4);
 			}
 			if (input.contains("\n")) {
