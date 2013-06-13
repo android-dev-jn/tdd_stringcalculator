@@ -11,9 +11,6 @@ public class Calculator {
 		if (string.equals("")) {
 			return 0;
 		} else {
-			if (string.contains("\n")) {
-				string = string.replace("\n", ",");
-			}
 			int result = 0;
 			String[] tokens = string.split(",");
 			for (int i = 0; i < tokens.length; i ++) {
