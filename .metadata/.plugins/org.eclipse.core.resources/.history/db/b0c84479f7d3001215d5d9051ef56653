@@ -1,7 +1,5 @@
 package Calculator;
 
-import java.util.regex.Pattern;
-
 public class Calculator {	
 	
 	public static int add() {
@@ -16,19 +14,15 @@ public class Calculator {
 			int result = 0, numberOfNegative = 0;
 			int[] numbers = new int[1000];
 			String delimiter = ",", input = string, msg = "negatives not allowed: ";
-			if (string.contains("//") && string.contains("\n")) {
+			if (string. contains("//") && string.contains("\n")) {
 				delimiter = string.substring(2,3);
 				input = string.substring(4);
-			}
-			if (string.contains("//[") && string.contains("]\n")) {
-				delimiter = string.substring(3, string.indexOf("]\n"));
-				input = string.substring(string.indexOf("]\n") + 2);
 			}
 			if (input.contains("\n")) {
 				input = input.replace("\n", ",");
 			}
 			
-			String[] tokens = input.split(Pattern.quote(delimiter));
+			String[] tokens = input.split(delimiter);
 			for (int i = 0; i < tokens.length; i ++) {
 				numbers[i] = Integer.parseInt(tokens[i]);
 				if (numbers[i] <= 1000) {
