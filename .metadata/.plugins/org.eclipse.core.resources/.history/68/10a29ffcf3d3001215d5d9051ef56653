@@ -2,9 +2,9 @@ package Calculator;
 
 public class Calculator {
 
-	public static int add() {
+	public static Object add() {
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 }
