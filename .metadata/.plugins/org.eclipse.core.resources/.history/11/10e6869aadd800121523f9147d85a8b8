@@ -10,10 +10,5 @@ public class CalculatorTest {
 	public void handleNonInput(){
 		assertEquals(0, Calculator.add());
 	}
-	
-	@Test
-	public void handleEmptyString(){
-		assertEquals(0, Calculator.add(""));
-	}
 
 }
