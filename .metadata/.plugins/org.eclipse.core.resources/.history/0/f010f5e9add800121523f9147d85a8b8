@@ -8,11 +8,8 @@ public class Calculator {
 	}
 
 	public static Object add(String string) {
-		if (string.equals("")) {
-			return 0;
-		} else {
-			return Integer.parseInt(string);
-		}		
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
