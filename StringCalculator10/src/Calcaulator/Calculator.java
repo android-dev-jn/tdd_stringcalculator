@@ -11,11 +11,17 @@ public class Calculator {
 		if (string.equals("")) {
 			return 0;
 		} else {
-			if (string.contains("\n")) {
-				string = string.replace("\n", ",");
+			String input = string;
+			String delimiter = ",";
+			if (string.contains("//") && string.contains("\n")) {
+				input = string.substring(string.indexOf("\n") + 1);
+				delimiter = string.substring(2, string.indexOf("\n"));
+			}
+			if (input.contains("\n")) {
+				input = input.replace("\n", delimiter);
 			}
 			int result = 0;
-			String[] tokens = string.split(",");
+			String[] tokens = input.split(delimiter);
 			for (int i = 0; i < tokens.length; i ++) {
 				result += Integer.parseInt(tokens[i]);
 			}
