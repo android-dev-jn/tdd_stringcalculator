@@ -1,0 +1,17 @@
+package MyStack;
+
+import java.util.ArrayList;
+
+public class MyStack {
+	
+	private ArrayList<String> mList;
+
+	public int size() {		
+		return mList.size();
+	}
+
+	public void push(String string) {
+		
+	}
+
+}

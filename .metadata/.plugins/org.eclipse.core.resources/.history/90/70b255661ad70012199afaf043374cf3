@@ -1,0 +1,9 @@
+package MyStack;
+
+public class MyStack {
+
+	public Object size() {		
+		return 0;
+	}
+
+}

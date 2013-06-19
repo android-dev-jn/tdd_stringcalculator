@@ -1,0 +1,21 @@
+package MyStack;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class MyStackTest {
+	@Test
+	public void handleZeroSize() {
+		MyStack mStack = new MyStack();
+		assertEquals(0, mStack.size());
+	}
+	
+	@Test
+	public void handlePushNewOne() {
+		MyStack mStack = new MyStack();
+		mStack.push("1");
+		assertEquals(1, mStack.size());
+	}
+
+}
