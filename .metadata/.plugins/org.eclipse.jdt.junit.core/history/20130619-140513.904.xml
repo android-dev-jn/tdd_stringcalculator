@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="StringCalculator10" project="StringCalculator10" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="Calcaulator.CalculatorTest" time="0.001">
+    <testcase name="handleEmptyString" classname="Calcaulator.CalculatorTest" time="0.0"/>
+    <testcase name="handleNonInput" classname="Calcaulator.CalculatorTest" time="0.0"/>
+    <testcase name="handleSingleNumber" classname="Calcaulator.CalculatorTest" time="0.0"/>
+    <testcase name="handleTwoNumber" classname="Calcaulator.CalculatorTest" time="0.0"/>
+    <testcase name="handleNewLine" classname="Calcaulator.CalculatorTest" time="0.0"/>
+  </testsuite>
+</testrun>
