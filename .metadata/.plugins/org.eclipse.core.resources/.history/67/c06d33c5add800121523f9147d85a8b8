@@ -15,10 +15,5 @@ public class CalculatorTest {
 	public void handleEmptyString(){
 		assertEquals(0, Calculator.add(""));
 	}
-	
-	@Test
-	public void handleSingleNumber(){
-		assertEquals(1, Calculator.add("1"));
-	}
 
 }

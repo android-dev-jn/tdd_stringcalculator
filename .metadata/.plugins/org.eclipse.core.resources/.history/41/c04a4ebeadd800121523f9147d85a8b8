@@ -1,0 +1,15 @@
+package Calcaulator;
+
+public class Calculator {
+
+	public static int add() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public static Object add(String string) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
