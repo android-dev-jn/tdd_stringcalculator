@@ -16,7 +16,7 @@ public class Calculator {
 			for (int i = 0; i < tokens.length; i ++) {
 				result += Integer.parseInt(tokens[i]);
 			}
-			return result;
+			return Integer.parseInt(string);
 		}		
 	}
 
